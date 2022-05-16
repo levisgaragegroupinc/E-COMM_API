@@ -7,7 +7,6 @@ const { Product, Category, Tag, ProductTag } = require("../../models");
 router.get("/", async (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
-  // attributes here?
 try {
 const findAllProducts = await Product.findAll({
   include: [
@@ -45,9 +44,8 @@ router.get("/:id", async (req, res) => {
     })
 if(!findOneProduct) {
   res.status(404).json({message: `No product found with id: ${req.params.id}. ID not found.`});
-  res.status(200).json(findOneProduct);
 }
-
+res.status(200).json(findOneProduct);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
