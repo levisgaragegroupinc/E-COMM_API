@@ -37,11 +37,9 @@ router.get("/:id", async (req, res) => {
       },
     });
     if (!findOneCategory) {
-      res
-        .status(404)
-        .json({
-          message: `No category found with id: ${req.params.id}. ID not found.`,
-        });
+      res.status(404).json({
+        message: `No category found with id: ${req.params.id}. ID not found.`,
+      });
     }
     res.status(200).json(findOneProduct);
   } catch (err) {
@@ -50,8 +48,16 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   // create a new category
+  try {
+    const createNewCategory = await Category.create(req.body, {
+      category_name: req.body.category_name,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 router.put("/:id", (req, res) => {
