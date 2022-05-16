@@ -19,7 +19,7 @@ const findAllProducts = await Product.findAll({
   ],
 });
 if(!findAllProducts) {
-  res.status(404).json({message: "No products found"});
+  res.status(404).json({message: "No products found."});
   return;
   }
 res.status(200).json(findAllProducts);
