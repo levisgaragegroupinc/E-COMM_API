@@ -69,11 +69,9 @@ router.put("/:id", async (req, res) => {
       },
     });
     if (!updateCategory) {
-      res
-        .status(404)
-        .json({
-          message: `No catergory found with id: ${req.params.id}. ID not found.`,
-        });
+      res.status(404).json({
+        message: `No catergory found with id: ${req.params.id}. ID not found.`,
+      });
     }
     res.status(200).json(updateCategory);
   } catch (error) {
@@ -82,8 +80,23 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", async (req, res) => {
   // delete a category by its `id` value
+  try {
+    const deleteCategory = await Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!deleteCategory) {
+      res.status(404).json({
+        message: `No catergory found with id: ${req.params.id}. ID not found.`,
+      });
+    }
+    res.status(200).json(deleteCategory);
+  } catch (error) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
