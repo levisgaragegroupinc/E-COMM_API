@@ -55,6 +55,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// CREATE NEW PRODUCT ROUTE: IN-PROGRESS!
 // create new product
 router.post("/", (req, res) => {
   /* req.body should look like this...
