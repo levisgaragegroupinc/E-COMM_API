@@ -10,7 +10,6 @@ class Product extends Model {}
 // set up fields and rules for Product model
 Product.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -24,7 +23,7 @@ Product.init(
     },
 
     price: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
       isDecimal: true,
       defaultValue: 0.0,
@@ -39,7 +38,6 @@ Product.init(
 
     category_id: {
       type: DataTypes.INTEGER,
-      // - References the `Category` model's `id`.
       references: {
         model: Category,
         key: "id",
