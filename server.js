@@ -16,8 +16,8 @@ app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 });
 
-// CODE THAT MIGHT NEED TO GO HERE - TRAVIS. UN-COMMENT CODE IF NEEDED>
+// COMMENT OUT THE CODE ABOVE AND RUN THIS CODE TO DROP THE DATABASE. MUST RESEED AFTER DROPPING.
 // turn on connection to db and server
-// sequelize.sync({ force: false }).then(() => {
-//   app.listen(PORT, () => console.log('Now listening'));
+// sequelize.sync({ force: true }).then(() => {
+//   app.listen(PORT, () => console.log("Now listening"));
 // });
