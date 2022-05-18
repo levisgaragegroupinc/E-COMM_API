@@ -41,7 +41,7 @@ router.get("/:id", async (req, res) => {
         message: `No category found with id: ${req.params.id}. ID not found.`,
       });
     }
-    res.status(200).json(findOneProduct);
+    res.status(200).json(findOneCategory);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
