@@ -6,7 +6,7 @@ The purpose of this project was to create the back end for an e-commerce site by
 
 # Installation
 
-To use this E-COM appliation you must install Node, Express, Sequalizer, and MySQL and clone the code from this repository into your own directory.
+To use this E-COM appliation you must install Node, Express, Sequalizer, and MySQL and clone the code from this repository into your own directory. Copy and or rename .env.EXAMPLE file to .env and enter your MySQL credentials.
 
 Install Node: [Node.js](https://nodejs.org/en/download/).
 
