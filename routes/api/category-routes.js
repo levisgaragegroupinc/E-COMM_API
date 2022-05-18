@@ -31,10 +31,10 @@ router.get("/:id", async (req, res) => {
       where: {
         id: req.params.id,
       },
-      // include: {
-      //   model: Product,
-      //   attributes: ["id", "product_name", "price", "stock"],
-      // },
+      include: {
+        model: Product,
+        attributes: ["id", "product_name", "price", "stock"],
+      },
     });
     if (!findOneCategory) {
       res.status(404).json({
