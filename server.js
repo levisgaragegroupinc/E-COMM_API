@@ -11,13 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-// sync sequelize models to the database, then turn on the server
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-});
-
-// COMMENT OUT THE CODE ABOVE AND RUN THIS CODE TO DROP THE DATABASE. MUST RESEED AFTER DROPPING.
 // turn on connection to db and server
-// sequelize.sync({ force: true }).then(() => {
-//   app.listen(PORT, () => console.log("Now listening"));
-// });
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log("Now listening"));
+});
