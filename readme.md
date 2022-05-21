@@ -58,7 +58,9 @@ Use this program as the bases for building an E-COMMERCE application database fo
 
 ## Link to video demonstration
 
-Video demo: [GDrive Link](https://drive.google.com/file/d/1k0BfFzAc2L6nen-bdYQ84Y5bGK9G5lgs/view?usp=sharing)
+Video: Setting up the schema and seeding the database: [GDrive Link](https://drive.google.com/file/d/1zxdFVp90ITOanxYmj1ZHRpE3QVs08C_j/view?usp=sharing)
+
+Video: Testing API routes using Insomnia: [GDrive Link](https://drive.google.com/file/d/1k0BfFzAc2L6nen-bdYQ84Y5bGK9G5lgs/view?usp=sharing)
 
 ## Credits
 
