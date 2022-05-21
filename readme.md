@@ -18,7 +18,7 @@ Install MySQL2 package: [MySQL2](https://www.npmjs.com/package/mysql2).
 
 # Appearance
 
-![API Tests In Insomnia](./assets/images/image_name.png)
+![API Tests In Insomnia](./assets/images/ecomm-api.png)
 
 # Usage
 
@@ -58,7 +58,7 @@ Use this program as the bases for building an E-COMMERCE application database fo
 
 ## Link to video demonstration
 
-Video demo: [GDrive Link]()
+Video demo: [GDrive Link](https://drive.google.com/file/d/1k0BfFzAc2L6nen-bdYQ84Y5bGK9G5lgs/view?usp=sharing)
 
 ## Credits
 
